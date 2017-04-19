@@ -1,0 +1,12 @@
+.contentWrap{
+    position: relative;
+}
+.contentItem{
+    position: absolute;
+    top:0;
+    left: 0;
+    display: none;
+}
+.current{
+    display: block;
+}
