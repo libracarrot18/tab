@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tab选项卡切换</title>
+    <link href="tab.css" type="text/css" rel="stylesheet"/>
+    <script type="text/javascript" src="http://wx.chinapanna.com/public/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="tab.js"></script>
+    <style type="text/css">
+        .fl{float:left;}
+        .fr{float: right}
+        .clearfix {zoom:1;}    /*==for IE6/7 Maxthon2==*/
+        .clearfix :after {clear:both;content:'.';display:block;width: 0;height: 0;visibility:hidden;}
+        li{list-style: none;width: 150px;height: 30px;background: red;}
+        .tab-js{
+            width: 500px;
+            height: 300px;
+            margin-bottom: 300px;
+        }
+        .contentWrap{
+            width: 500px;
+            height: 270px;
+            background: blue;
+        }
+        .active{
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab-js" tab-config='{"triggerType":"click","effect":"fade","invoke":1,"auto":1500}'>
+        <ul class="tabWrap">
+            <li class="tabItem active">敏捷</li>
+            <li class="tabItem">智力</li>
+            <li class="tabItem">力量</li>
+        </ul>
+        <div class="contentWrap">
+            <div class="contentItem current">黑暗游侠</div>
+            <div class="contentItem">沉默术士</div>
+            <div class="contentItem">半人马酋长</div>
+        </div>
+    </div>
+    <div class="tab-js" tab-config='{"triggerType":"mouseover","effect":"fade","invoke":2,"auto":false}'>
+        <ul class="tabWrap">
+            <li class="tabItem active">敏捷</li>
+            <li class="tabItem">智力</li>
+            <li class="tabItem">力量</li>
+        </ul>
+        <div class="contentWrap">
+            <div class="contentItem current">黑暗游侠</div>
+            <div class="contentItem">沉默术士</div>
+            <div class="contentItem">半人马酋长</div>
+        </div>
+    </div>
+    <div class="tab-js" tab-config='{"triggerType":"click","effect":"default","invoke":1,"auto":false}'>
+        <ul class="tabWrap">
+            <li class="tabItem active">敏捷</li>
+            <li class="tabItem">智力</li>
+            <li class="tabItem">力量</li>
+        </ul>
+        <div class="contentWrap">
+            <div class="contentItem current">黑暗游侠</div>
+            <div class="contentItem">沉默术士</div>
+            <div class="contentItem">半人马酋长</div>
+        </div>
+    </div>
+<script type="text/javascript">
+    $(function () {
+        $('.tab-js').tab();
+    })
+</script>
+</body>
+</html>
